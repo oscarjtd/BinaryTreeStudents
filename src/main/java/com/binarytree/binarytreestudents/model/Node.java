@@ -47,7 +47,7 @@ public class Node {
 
     }
 
-    public List<Student> listStudentsByGrade(double grade, int condition) {
+    public List<Student> listStudentsByGrade(float grade, int condition) {
 
         List<Student> listStudentsByGrade = new ArrayList<>();
 
