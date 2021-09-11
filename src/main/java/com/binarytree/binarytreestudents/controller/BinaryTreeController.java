@@ -75,13 +75,13 @@ public class BinaryTreeController {
 
     @GetMapping("/listEndEqualNum/{number}")
     public @ResponseBody
-    ResponseEntity<?> listEndEqualNum(@PathVariable char number) throws DataNotFoundException {
+    ResponseEntity<?> listEndEqualNum(@PathVariable int number) throws DataNotFoundException {
         return binaryTreeService.listEndEqualNum(number);
     }
 
     @GetMapping("/countEndEqualNum/{number}")
     public @ResponseBody
-    ResponseEntity<?> countEndEqualNum(@PathVariable char number) throws DataNotFoundException {
+    ResponseEntity<?> countEndEqualNum(@PathVariable int number) throws DataNotFoundException {
         return binaryTreeService.countEndEqualNum(number);
     }
 

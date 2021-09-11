@@ -147,7 +147,7 @@ public class Node {
         // Once finished return the List
         return listStudentsPostOrder;
     }
-    public List<Student> listEndEqualNum(char number) //throws DataNotFoundException
+    public List<Student> listEndEqualNum(int number) //throws DataNotFoundException
     {
         // Creating a new List...
         List<Student> listEndEqualNum = new ArrayList<>();
@@ -159,37 +159,22 @@ public class Node {
         // if root Left has something...
         if (this.getLeft() != null)
         {
-            // if root Left ends in number...
-            if (this.getData().getCode() % 10 == number)
-            {
                 // add to the List and move to the Left and call the method AGAIN!
                 listEndEqualNum.addAll(this.getLeft().listEndEqualNum(number));
-            }
+
         }
         // if root Right has something...
         if (this.getRight() != null)
         {
-            // if root Right ends in number...
-            if (this.getData().getCode() % 10 == number)
-            {
                 // add to the List and move to the Right and call the method AGAIN!
                 listEndEqualNum.addAll(this.getRight().listEndEqualNum(number));
-            }
         }
-
-        // HELP WITH THIS VALIDATION!!
-        /*
-        if(listEqualNum.isEmpty()){
-            throw new DataNotFoundException("no hay niños terminados en ese numero");
-        }
-         */
-
         // Once finished return the List
         return listEndEqualNum;
     }
 
     // Method to count how many Boys' ID end in a certain number given by the user
-    public int countEndEqualNum(char number)
+    public int countEndEqualNum(int number)
     {
         // set a new variable with the list that the method above returns...
         List<Student> listStudentsEndEqualNum = listEndEqualNum(number);

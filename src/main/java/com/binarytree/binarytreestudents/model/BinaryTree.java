@@ -66,7 +66,7 @@ public class BinaryTree {
     }
 
     // Method to show the Boys ending in a certain number given by the user
-    public List<Student> listEndEqualNum(char number) throws DataNotFoundException
+    public List<Student> listEndEqualNum(int number) throws DataNotFoundException
     {
         // if root has something...
         if (root!=null)
@@ -78,7 +78,7 @@ public class BinaryTree {
     }
 
     // Method to count Boy's ID that end in the same number
-    public int countEndEqualNum(char number) throws DataNotFoundException
+    public int countEndEqualNum(int number) throws DataNotFoundException
     {
         // if root has something...
         if(root != null)

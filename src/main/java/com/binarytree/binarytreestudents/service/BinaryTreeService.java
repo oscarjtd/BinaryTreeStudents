@@ -43,7 +43,7 @@ public class BinaryTreeService {
     }
 
     // ResponseEntity to list Boys who end in a certain number given by the user
-    public ResponseEntity<ResponseBinaryTreeDto> listEndEqualNum(char number) throws DataNotFoundException
+    public ResponseEntity<ResponseBinaryTreeDto> listEndEqualNum(int number) throws DataNotFoundException
     {
         return new ResponseEntity<>(
                 new ResponseBinaryTreeDto(binaryTree.listEndEqualNum(number),"Successful List",
@@ -52,7 +52,7 @@ public class BinaryTreeService {
     }
 
     // ResponseEntity to show how many ID's end in a certain number given by the user
-    public ResponseEntity<ResponseBinaryTreeDto> countEndEqualNum(char number) throws DataNotFoundException
+    public ResponseEntity<ResponseBinaryTreeDto> countEndEqualNum(int number) throws DataNotFoundException
     {
         return new ResponseEntity<>(
                 new ResponseBinaryTreeDto(binaryTree.countEndEqualNum(number),"Successful Counter",
